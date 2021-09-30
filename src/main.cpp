@@ -1,19 +1,21 @@
+#define SDL_MAIN_HANDLED
 #include <iostream>
-#include <SDL.h>
-#include <SDL_image.h>
+#include "../include/game.h"
+#include <SDL2/SDL.h>
 
-int main(int argc, char** argv)
+
+int main(int argv, char** args)
 {
-    // Game *game = new Game();
-    // game->initialise("Title", 0,0,1366,768, SDL_WINDOW_FULLSCREEN | SDL_WINDOW_INPUT_FOCUS);
+    Game *game = new Game();
+    
 
-    // while(game->isRunning())
-    // {
-    //     game->handleEvents();
-    //     game->update();
-    //     game->render();
-    // }
+    while(game->isRunning())
+    {
+        game->handleEvents();
+        game->update();
+        game->render();
+    }
 
-    // game->cleanup();
+    game->cleanup();
     return 0;
 }
