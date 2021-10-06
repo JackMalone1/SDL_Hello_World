@@ -2,6 +2,7 @@
 
 Game::Game()
 {
+
     if(SDL_Init(SDL_INIT_VIDEO) < 0)
     {
         std::cout << "SDL could not be initialised. Error: " << SDL_GetError();
